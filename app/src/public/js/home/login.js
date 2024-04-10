@@ -2,7 +2,9 @@
 
 const id = document.querySelector("#id"),
       psword = document.querySelector("#psword"),
-      loginBtn = document.querySelector("#Button");
+      loginBtn = document.querySelector("#button");
+
+      loginBtn.addEventListener("click", login);
 
     function login() {
        const req = {
@@ -15,7 +17,7 @@ const id = document.querySelector("#id"),
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(req)
+        body: JSON.stringify(req),
        })
          .then((res) => res.json())
          .then((res) => {
